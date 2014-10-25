@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  etag: MyString
+  top_id: 1
+  bottom_id: 1
+  missing_list: MyText
+
+two:
+  etag: MyString
+  top_id: 1
+  bottom_id: 1
+  missing_list: MyText
