@@ -34,6 +34,10 @@ Or install it yourself as:
 
     $ gem install cursorquery
 
+Then run migrations
+
+    rake db:migrate
+
 ## Usage
 
 Call the method cursor on any ActiveRecord query, passing in params.
