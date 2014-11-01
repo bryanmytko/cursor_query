@@ -38,7 +38,7 @@ module CursorQuery
     end
 
     def cursor_query
-      @cursor_query ||= Query.find_by(etag: etag)
+      @cursor_query = Query.find_by(etag: etag)
     end
 
     def create_response
@@ -74,11 +74,11 @@ module CursorQuery
     end
 
     def populate_latest
-      more_posts('>', upper_lim, 'id asc').reverse if latest?
+      (latest?) ? more_posts('>', upper_lim, 'id asc').reverse : []
     end
 
     def populate_previous
-      more_posts('<', lower_lim, 'id desc') if previous?
+      (previous) ? more_posts('<', lower_lim, 'id desc') : []
     end
 
     def populate_edits
