@@ -11,3 +11,5 @@ gemspec
 # your gem to rubygems.org.
 
 gem 'byebug'
+
+gem 'rspec'
